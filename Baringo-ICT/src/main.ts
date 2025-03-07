@@ -1,14 +1,20 @@
-import './assets/main.css'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import App from "./App.vue";
+import router from "./router";
 
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+// Import Bootstrap CSS and JS
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import App from './App.vue'
-import router from './router'
 
-const app = createApp(App)
 
-app.use(createPinia())
-app.use(router)
+// Create Vue app instance
+const app = createApp(App);
 
-app.mount('#app')
+// Use plugins
+app.use(createPinia()); // Pinia for state management
+app.use(router); // Vue Router for navigation
+
+// Mount the app
+app.mount("#app");

@@ -1,0 +1,78 @@
+.home-page {
+    text-align: center;
+    background: #f9f9f9;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: #007bff;
+    color: white;
+    padding: 60px 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-register {
+    display: inline-block;
+    background: #ffcc00;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .btn-register:hover {
+    background: #e6b800;
+  }
+  
+  /* Sections */
+  .home-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .btn-view-all {
+    display: inline-block;
+    margin-top: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .btn-view-all:hover {
+    background: #0056b3;
+  }
+  
+  /* Testimonials Section */
+  .testimonials-section {
+    background: #fff;
+    padding: 40px 20px;
+  }
+  

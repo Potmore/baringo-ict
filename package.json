@@ -1,0 +1,23 @@
+{
+  "name": "baringo-ict",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.0",
+    "vue-router": "^4.5.0",
+    "pinia": "^3.0.1",
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "typescript": "^5.2.2",
+    "tailwindcss": "^4.0.9",
+    "postcss": "^8.5.3",
+    "autoprefixer": "^10.4.20"
+  }
+}
