@@ -1,78 +1,369 @@
+/* ========================
+   Global Styles
+======================== */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ========================
+   Home Page Styling
+======================== */
 .home-page {
+  text-align: center;
+  background: #f9f9f9;
+}
+
+/* ========================
+   Hero Section
+======================== */
+.hero {
+  background: url('@/assets/images/hero-image.webp') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  height: 450px; /* Default height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Add an overlay for better text visibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Ensures text stays above the overlay */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: wheat;
+}
+
+/* ========================
+   Buttons
+======================== */
+.btn-register {
+  display: inline-block;
+  background: #ffcc00;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-register:hover {
+  background: #e6b800;
+}
+
+.btn-view-all {
+  display: inline-block;
+  margin-top: 20px;
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-view-all:hover {
+  background: #0056b3;
+}
+
+/* ========================
+   Sections
+======================== */
+.home-section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/*upcoming events */
+.events-section {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.events-section h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.events-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.events-section li {
+  background: white;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  color: #444;
+  transition: transform 0.3s ease-in-out;
+}
+
+.events-section li:hover {
+  transform: translateY(-3px);
+  background-color: #007bff;
+  color: white;
+}
+
+.events-section li strong {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.events-section li:hover strong {
+  color: white;
+}
+/* Events Image */
+.events-image {
+  flex: 1; /* Ensures it shares space with text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px; /* Prevents shrinking too much */
+}
+
+.events-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Fading effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
     text-align: center;
-    background: #f9f9f9;
   }
-  
-  /* Hero Section */
+
+  .events-content {
+    text-align: center;
+  }
+
+  .events-image img {
+    max-width: 100%;
+  }
+}
+/* Call to action */
+.cta-section {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-register {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: white;
+  color: #007bff;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-register:hover {
+  background-color: #e0e0e0;
+}
+
+/* General Styling */
+.About-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(226, 213, 213); /* Light background */
+  padding: 40px 10px;
+}
+
+/* Content Container */
+.About-us {
+  max-width: 800px;
+  padding: 20px;
+}
+
+/* Heading */
+.About-us h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* Paragraph */
+.About-us p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .About-us h2 {
+      font-size: 1.8rem;
+  }
+
+  .About-us p {
+      font-size: 1rem;
+  }
+}
+
+
+/* ========================
+   Testimonials Section
+======================== */
+.testimonials-section {
+  background: #fff;
+  padding: 40px 20px;
+}
+
+/* ========================
+   Footer
+======================== */
+.footer {
+  background: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #ffcc00;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Responsive Design
+======================== */
+@media (max-width: 768px) {
   .hero {
-    background: #007bff;
-    color: white;
-    padding: 60px 20px;
+    height: 300px; /* Reduce height on tablets */
+    padding: 40px 15px;
   }
-  
+
   .hero-content h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 28px;
   }
-  
+
   .hero-content p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 16px;
   }
-  
+
   .btn-register {
-    display: inline-block;
-    background: #ffcc00;
-    color: black;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  
-  .btn-register:hover {
-    background: #e6b800;
-  }
-  
-  /* Sections */
-  .home-section {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 20px;
-  }
-  
-  h2 {
-    font-size: 26px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .courses-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .btn-view-all {
-    display: inline-block;
-    margin-top: 20px;
-    background: #007bff;
-    color: white;
     padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
+    font-size: 14px;
   }
-  
-  .btn-view-all:hover {
-    background: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 250px; /* Even smaller for mobile */
+    padding: 30px 10px;
   }
-  
-  /* Testimonials Section */
-  .testimonials-section {
-    background: #fff;
-    padding: 40px 20px;
+
+  .hero-content h1 {
+    font-size: 22px;
   }
-  
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .btn-register {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
